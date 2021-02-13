@@ -1,0 +1,28 @@
+<configuration
+	xmlns="http://www.jooq.org/xsd/jooq-codegen-3.14.0.xsd">
+	<jdbc>
+		<driver>com.mysql.cj.jdbc.Driver</driver>
+		<url>jdbc:mysql://localhost:3306</url>
+		<user></user>
+		<password></password>
+	</jdbc>
+	<generator>
+		<database>
+			<name>org.jooq.meta.mariadb.MariaDBDatabase</name>
+			<includes>.*</includes>
+			<excludes></excludes>
+			<inputSchema>mysql</inputSchema>
+		</database>
+		<target>
+			<packageName>db.msyql</packageName>
+			<directory>src</directory>
+		</target>
+		<generate>
+			<nullableAnnotation>true</nullableAnnotation>
+			<nullableAnnotationType>org.eclipse.jdt.annotation.Nullable
+			</nullableAnnotationType>
+			<indentation>\t</indentation>
+			<newline>\r\n</newline>
+		</generate>
+	</generator>
+</configuration>
