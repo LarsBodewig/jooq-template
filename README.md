@@ -1,10 +1,10 @@
-# jOOQ-Template
+# DB-Template
 
-This project serves as a template to generate java classes from any existing database scheme using jOOQ. 
+This project serves as a template to manage an application database as a Maven module.
 
-Derived projects can easily be used as a dependency for other projects without publicizing the database credentials.
+The template offers flyway to alter the database structure using incremental SQL scripts. After each migration jOOQ is used to generate new java source files from the database structure to allow type-safe SQL queries. As derived projects should be used as a dependency for other application modules, this template also includes additional utility functions to further simplify the usage of jOOQ.
 
-#### Example usage of the generated code for the MySQL system schema on MariaDB with the additionally supplied utility functions:
+#### Example usage of the provided jOOQ interface to query a MariaDB instance:
 
 ```java
 public static void main(String[] args) {
