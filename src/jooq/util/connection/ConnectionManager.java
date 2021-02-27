@@ -4,12 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import jooq.util.Settings;
 import jooq.util.Value;
 import jooq.util.config.Configuration;
 
 public class ConnectionManager {
 	private static Configuration config;
 
+	static {
+		Settings.disableSelfAd();
+	}
+	
 	public static void setConfiguration(Configuration config) {
 		ConnectionManager.config = config;
 	}
